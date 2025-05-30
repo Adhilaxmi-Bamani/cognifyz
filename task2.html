@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Change Button</title>
+  <style>
+    #colorButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="colorButton" onclick="changeColor()">Click Me!</button>
+
+  <script>
+    function changeColor() {
+      const button = document.getElementById("colorButton");
+
+      // Toggle between two colors
+      if (button.style.backgroundColor === "rgb(220, 53, 69)") {
+        button.style.backgroundColor = "#007BFF"; // Blue
+      } else {
+        button.style.backgroundColor = "rgb(220, 53, 69)"; // Red
+      }
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time-Based Greeting</title>
+  <script>
+    window.onload = function() {
+      const now = new Date();
+      const hour = now.getHours();
+      let greeting;
+
+      if (hour < 12) {
+        greeting = "Good morning!";
+      } else if (hour < 18) {
+        greeting = "Good afternoon!";
+      } else {
+        greeting = "Good evening!";
+      }
+
+      alert(greeting);
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
