@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+@media (max-width: 600px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  #menu-toggle:checked + .hamburger + ul {
+    display: flex;
+  }
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div><strong>MySite</strong></div>
+  <input type="checkbox" id="menu-toggle">
+  <label class="hamburger" for="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+  </nav>
+</body>
+</html>
